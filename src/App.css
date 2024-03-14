@@ -2,6 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-.Slider-bar{
-    padding: 1em 0.7em;
+/* .Slider-bar{
+    padding: 1em 3em;
+} */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap'); */
+
+@font-face {
+    font-family: outfit;
+    src: url(../public/fonts/Outfit/static/Outfit-Regular.ttf);
+}
+
+*{
+    font-family: outfit, Arial, sans-serif;
+
+}
+#root {
+    display: flex;
+    min-height: 100vh;
+}
+.main .greet span {
+    background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main .Cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px,1fr));
+    /* grid-column: 4; */
+    gap: 15px;
+    padding: 20px;
+    /* overflow: hidden; */
+    /* flex-wrap: nowrap; */
+}
+.main .Card{
+    height: 200px;
+    padding: 15px;
+    background-color: #f0f4f9;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.main .Card img{
+    width: 35px;
+    padding: 5px;
+    position: absolute;
+    background-color: white;
+    border-radius: 20px;
+    bottom: 10px;
+    right: 10px;
+}
+
+.main .Card p {
+    color:  #585858;
+    font-size: 17px;
+}
+.main .Card:hover{
+    background-color: #dfe4ea;
 }
