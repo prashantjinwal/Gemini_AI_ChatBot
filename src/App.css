@@ -20,22 +20,37 @@
 #root {
     display: flex;
     min-height: 100vh;
+    animation: fadin 2s ;
 }
+
+@keyframes fadin {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 .main .greet span {
     background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546 );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.main .Cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px,1fr));
+.Cards::-webkit-scrollbar{
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); */
+    /* grid-row: 4; */
     /* grid-column: 4; */
-    gap: 15px;
-    /* padding: 20px; */
+    /* gap: 15px;
+    padding: 20px; */
     /* overflow: hidden; */
     /* flex-wrap: nowrap; */
+    display: none;
+    
 }
+
 .main .Card{
     height: 200px;
     padding: 15px;
@@ -88,6 +103,12 @@
     animation: loader 2s infinite linear;
 
 }
+.Slider-bar .Recent{
+    animation: fadin 1.5s;
+}
+.Slider-bar .recent-title{
+    animation: fadin 1.5s;
+}
 
 @keyframes loader {
     0%{
@@ -96,4 +117,30 @@
     100%{
         background-position: 800px 0px;
     }
+}
+
+@media (max-width:600px){
+    .Slider-bar{
+        display: none;
+    }
+    .main-bottom input{
+        flex:  none;
+        width: 150px;
+    }
+    .main-bottom img{
+        width: 25px;
+    }
+    .search-box{
+        padding: 5px 10px;
+    }
+    .search-box div{
+        gap: 5px;
+    }
+    /* .main .Cards{
+    display:  flex ;
+    flex-direction: row;
+    width: 90vw;
+    max-width: 30em;
+    } */
+    
 }
