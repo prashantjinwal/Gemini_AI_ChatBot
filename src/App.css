@@ -32,7 +32,7 @@
     grid-template-columns: repeat(auto-fill, minmax(180px,1fr));
     /* grid-column: 4; */
     gap: 15px;
-    padding: 20px;
+    /* padding: 20px; */
     /* overflow: hidden; */
     /* flex-wrap: nowrap; */
 }
@@ -60,4 +60,40 @@
 }
 .main .Card:hover{
     background-color: #dfe4ea;
+}
+
+.search-box img{
+    width: 1.5em;
+    cursor: pointer;
+    display: flex;
+}
+.result::-webkit-scrollbar{
+    display: none;
+}
+.loader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.loader hr{
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right , #9ed7ff, #ffffff , #9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+    animation: loader 2s infinite linear;
+
+}
+
+@keyframes loader {
+    0%{
+        background-position: -800px 0px;
+    }
+    100%{
+        background-position: 800px 0px;
+    }
 }
