@@ -76,9 +76,14 @@ function Main() {
         
 
             <div className='main-bottom  bottom-0 w-[99%] max-w-[900px] m-auto pt-0 pr-3 lg:pr-5 fixed '>
+
                     <div className='search-box flex items-center lg:gap-5 justify-between  bg-[#f0f7f9] rounded-[50px] py-3  px-5    '>
                         <textarea onChange={(e)=>setinput(e.target.value)}  value={input} className='lg:w-[75%] w-[75%] lg:py-2 lg:px-2 mx-6 resize-none mr-2 outline-0 py-3  bottom-0 bg-transparent text-[18px] bg-black'  placeholder="Enter a prompt here" />
                         <div className="flex  items-center lg:gap-4 gap-6 pr-4 ">
+                    <div className='search-box flex items-center gap-5 justify-between  bg-[#f0f7f9] rounded-[50px] py-3  px-5    '>
+                        <input onChange={(e)=>setinput(e.target.value)}  value={input} className='lg:w-[75%] w-full lg:py-2 lg:px-2 mx-3  py-5 outline-none bottom-0 bg-transparent text-[18px]' type='text' placeholder="Enter a prompt " />
+                        <div className="flex items-center lg:gap-4 gap-6 pr-3 ">
+
                             <img src={assets.gallery_icon} alt="#" />
                             <img src={assets.mic_icon} alt="#" />
                            {input? <img onClick={()=>onSent()} src={assets.send_icon} alt="#" />: null}
